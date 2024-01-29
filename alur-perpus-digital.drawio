@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-01-29T06:02:42.773Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="SLLUjH80fZ231RuxZQrL" version="23.0.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-29T06:20:02.696Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="DB0_N5RkKv9rjryGB71I" version="23.0.2" type="github">
   <diagram name="Page-1" id="WUuV_HfX_28saxBT3-uo">
-    <mxGraphModel dx="1386" dy="785" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1320" dy="748" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -37,6 +37,15 @@
         <mxCell id="ENz_lVD3ju6Wi-0TvknP-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ENz_lVD3ju6Wi-0TvknP-20" target="ENz_lVD3ju6Wi-0TvknP-22">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="ENz_lVD3ju6Wi-0TvknP-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="ENz_lVD3ju6Wi-0TvknP-32">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="490" as="sourcePoint" />
+            <mxPoint x="850" y="590" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="380" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="ENz_lVD3ju6Wi-0TvknP-20" value="daftar buku" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="310" y="430" width="140" height="80" as="geometry" />
         </mxCell>
@@ -46,8 +55,28 @@
         <mxCell id="ENz_lVD3ju6Wi-0TvknP-22" value="pencarian" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="530" y="430" width="140" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="ENz_lVD3ju6Wi-0TvknP-24" value="memasukan" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="ENz_lVD3ju6Wi-0TvknP-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ENz_lVD3ju6Wi-0TvknP-24" target="ENz_lVD3ju6Wi-0TvknP-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ENz_lVD3ju6Wi-0TvknP-24" value="memasukan kata kunci" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="750" y="430" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ENz_lVD3ju6Wi-0TvknP-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.386;entryY=-0.037;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ENz_lVD3ju6Wi-0TvknP-18" target="ENz_lVD3ju6Wi-0TvknP-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="820" y="70" />
+              <mxPoint x="364" y="70" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ENz_lVD3ju6Wi-0TvknP-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ENz_lVD3ju6Wi-0TvknP-28" target="ENz_lVD3ju6Wi-0TvknP-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ENz_lVD3ju6Wi-0TvknP-28" value="hasil pencarian" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="960" y="430" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ENz_lVD3ju6Wi-0TvknP-32" value="detail buku" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="960" y="560" width="140" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
