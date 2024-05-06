@@ -4,7 +4,7 @@
       <div class="col-lg-12">
         <h2 class="text-center my-4">RIWAYAT KUNJUNGAN</h2>
         <div class="my-3">
-          <input type="search" class="form-control form-control-lg rounded-5" placeholder="Filter...">  
+          <input type="search" class="form-control form-control-lg rounded-5" placeholder="Filter...">
         </div>
         <div class="my-3 text-muted">menampilkan 1 dari 1</div>
         <table class="table">
@@ -28,9 +28,9 @@
           </tbody>
         </table>
       </div>
-          <nuxt-link to="../">
-            <button type="button" class="btn btn-secondary" style="border-radius: 25px; font-size: 25px;">back</button>
-          </nuxt-link>
+      <nuxt-link to="../">
+        <button type="button" class="btn btn-secondary" style="border-radius: 25px; font-size: 25px;">back</button>
+      </nuxt-link>
     </div>
   </div>
 </template>

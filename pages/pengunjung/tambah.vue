@@ -8,7 +8,9 @@
             <input v-model="form.nama" type="text" class="form-control form-control-lg rounded-5" placeholder="NAMA...">
           </div>
           <div class="mb-3">
-            <select v-model="form.keanggotaan" class="form-control form-control-lg form-select rounded-5" placeholder="KEANGGOTAAN">
+            <select v-model="form.keanggotaan" class="form-control form-control-lg form-select rounded-5"
+              placeholder="KEANGGOTAAN">
+              <option value="">KATEGORI</option>
               <option value="Siswa">Siswa</option>
               <option value="Guru">Guru</option>
               <option value="Staf">Staf</option>
@@ -49,14 +51,15 @@
           </div>
           <div class="mb-3">
             <select class="form-control form-control-lg form-select rounded-5">
-                <option value="">KEPERLUAN</option>
-                <option value="Baca">Baca Buku</option>
-                <option value="Pinjam">Pinjam Buku</option>
-                <option value="Kembalikan">Kembalikan Buku</option>
+              <option value="">KEPERLUAN</option>
+              <option value="Baca">Baca Buku</option>
+              <option value="Pinjam">Pinjam Buku</option>
+              <option value="Kembalikan">Kembalikan Buku</option>
             </select>
           </div>
           <nuxt-link to="/pengunjung">
-            <button type="button" class="btn btn-secondary" style="border-radius: 25px; font-size: 25px;margin-bottom: 20px;">KIRIM</button>
+            <button type="button" class="btn btn-secondary"
+              style="border-radius: 25px; font-size: 25px;margin-bottom: 20px;">KIRIM</button>
             <br>
           </nuxt-link>
           <nuxt-link to="../">
@@ -72,30 +75,30 @@
 const supabase = useSupabaseClient()
 
 const members = ref([])
-const objectives = ref ([])
+const objectives = ref([])
 
-const form = ref ({
-    nama: "",
-    kategori: "",
-    kelas: "",
-    keperluan: "",
-  })
-  const kirimData = async () => {
-    const {error} = await supabase.from('pengunjung').insert([form.value])
-      if(!error) navigateTo('/pengunjung')
-  }
-    
-  const getKategori = async () => {
-    const { data, error } = await supabase.from('kategori').select 
-  if(data) members.value = data
-  }
-  const getKeperluan = async () => {
-    const { data, error } = await supabase.from('keperluan').select 
-    if(data) members.value = data
-  }
+const form = ref({
+  nama: "",
+  kategori: "",
+  kelas: "",
+  keperluan: "",
+})
+const kirimData = async () => {
+  const { error } = await supabase.from('pengunjung').insert([form.value])
+  if (!error) navigateTo('/pengunjung')
+}
 
-  onMounted(() => {
-    getKategori
-    getKeperluan
-  })     
+const getKategori = async () => {
+  const { data, error } = await supabase.from('kategori').select
+  if (data) members.value = data
+}
+const getKeperluan = async () => {
+  const { data, error } = await supabase.from('keperluan').select
+  if (data) members.value = data
+}
+
+onMounted(() => {
+  getKategori
+  getKeperluan
+})     
 </script>

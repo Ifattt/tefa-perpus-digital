@@ -9,7 +9,9 @@
         </div>
       </div>
       <div class="col-lg-6">
-        <div class="col p-5"><h1 style="font-size: 40px;">CANTIK ITU LUKA</h1></div>
+        <div class="col p-5">
+          <h1 style="font-size: 40px;">CANTIK ITU LUKA</h1>
+        </div>
         <h4>Pengarang: Eka Kurniawan</h4>
         <h4>Negara: Indonesia</h4>
         <h4>Bahasa: Indonesia</h4>
@@ -25,22 +27,25 @@
 </template>
 
 <style scoped>
-.cover{
+.cover {
   height: 300px;
   width: 200px;
 }
+
 .card.mb-3 {
   margin-top: 50px;
   margin-left: 20px;
   height: 340px;
   width: 235px;
 }
+
 h3 {
   margin-top: 50px;
   margin-left: 20px;
 }
+
 img {
-height: 300px;
-width: 200px;
+  height: 300px;
+  width: 200px;
 }
 </style>

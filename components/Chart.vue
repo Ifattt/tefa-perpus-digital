@@ -33,7 +33,7 @@ const config = {
 }
 
 onMounted(() => {
-  const myChart = new Chart (
+  const myChart = new Chart(
     document.getElementById('myChart'),
     config
   );
