@@ -45,6 +45,7 @@
             <div class="text">
               <h1 style="font-size: 110px;">3</h1>
               <h2>Buku</h2>
+              <h3 class="no">{{ book }}</h3>
             </div>
           </div>
         </div>
@@ -56,7 +57,17 @@
     <Chart />
   </div>
 </template>
+<script setup>
+const supabase = useSupabaseClient();
+const book = ref(0);
 
+const countBook = async () => {
+  const { data, count } = await supabase
+  .from("pengunjung")
+  .select("*", {count: "exact"});
+  if (data) visitor.value = count;
+};
+</script>
 
 <style scoped>
 .c {
