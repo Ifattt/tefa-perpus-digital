@@ -30,7 +30,7 @@
         <div class="card bg-caripengunjung rounded-5">
           <div class="card-body">
             <div class="text">
-              <h1 style="font-size: 110px;">3</h1>
+              <h1 style="font-size: 110px;">{{ visitor }}</h1>
               <h2>Pengunjung</h2>
             </div>
           </div>
@@ -43,9 +43,8 @@
         <div class="card bg-caribuku rounded-5">
           <div class="card-body">
             <div class="text">
-              <h1 style="font-size: 110px;">3</h1>
+              <h1 style="font-size: 110px;">{{ book }}</h1>
               <h2>Buku</h2>
-              <h3 class="no">{{ book }}</h3>
             </div>
           </div>
         </div>
@@ -60,13 +59,25 @@
 <script setup>
 const supabase = useSupabaseClient();
 const book = ref(0);
+const visitor = ref(0);
 
-const countBook = async () => {
+const countVisitor = async () => {
   const { data, count } = await supabase
   .from("pengunjung")
   .select("*", {count: "exact"});
   if (data) visitor.value = count;
 };
+const countBook = async () => {
+  const { data, count } = await supabase
+  .from("buku")
+  .select("*", {count: "exact"});
+  if (data) book.value = count;
+};
+
+onMounted(() => {
+  countVisitor()
+  countBook()
+})
 </script>
 
 <style scoped>
@@ -75,12 +86,10 @@ const countBook = async () => {
   justify-content: center;
   align-items: center;
 }
-
 .card {
   height: 250px;
   box-shadow: 1px 1px 10px #424242
 }
-
 .card.bg-pengunjung {
   background-image: url('../assets/img/k.jpeg');
   background-repeat: no-repeat;
@@ -88,18 +97,15 @@ const countBook = async () => {
   background-size: cover;
   opacity: 60%;
 }
-
 .card.bg-buku {
   background-image: url('../assets/img/c.jpg');
   background-size: cover;
   opacity: 60%;
 }
-
 .card.bg-caripengunjung {
   background-color: #D0DDFF;
   background-position: center center;
 }
-
 .card.bg-caribuku {
   background-color: #FFCBCB;
   background-position: center center;
